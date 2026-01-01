@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satu Nama Dalam Doa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background: #94A5A9;
+    font-family: 'Libre Baskerville', serif;
+    color: #1e1e1e;
+}
+
+/* overlay klik musik */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* konten */
+.container {
+    max-width: 680px;
+    margin: auto;
+    padding: 50px 25px 80px;
+    line-height: 2;
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* foto di tengah teks */
+.photo {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 320px;
+    background: #fff;
+    padding: 8px;
+    border: 2px solid rgba(0,0,0,.4);
+}
+</style>
+</head>
+
+<body>
+
+<audio id="musik" loop>
+    <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<div class="overlay" onclick="mulaiMusik()">
+    Ketuk layar untuk membuka dan memulai musik
+</div>
+
+<div class="container">
+    <h1>Satu nama yang kusebut dalam doa</h1>
+
+    <p>
+    Izinkan aku terus merapalkan doa-doa untuk kebahagiaanmu dalam setiap diamku.
+    Karena doa adalah satu-satunya cara aku merasa bisa dekat denganmu tanpa kau tahu.
+    </p>
+
+    <p>
+    Aku meminta kepada Sang Pemilik Semesta agar selalu menjagamu, selalu melindungimu,
+    selalu memberikan kebahagiaan yang berlimpah, sekalipun aku tak pernah mampu
+    menjadi alasan kebahagiaan itu.
+    </p>
+
+    <!-- FOTO DI TENGAH TEKS -->
+    <div class="photo">
+        <img src="foto.jpg" alt="Foto">
+    </div>
+
+    <p>
+    Perasaan yang tak ingin dimenangkan, tak perlu diperjuangkan,
+    cukup kusimpan baik-baik sebagai kali terakhir hatiku memilih
+    seseorang dengan sepenuhnya.
+    </p>
+
+    <p>
+    Dan meski aku belum memilikimu hari ini, aku bisa mendoakanmu setiap hari.
+    Doa-doa itu mungkin tak pernah kau dengar,
+    tapi ia mengetuk langit dengan namamu.
+    </p>
+
+    <p>
+    Itulah bentuk kagum yang paling tulus —  
+    tak mengikat, tak membebani, hanya menjaga.
+    </p>
+</div>
+
+<script>
+function mulaiMusik(){
+    const audio = document.getElementById("musik");
+    audio.play();
+    document.querySelector(".overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
